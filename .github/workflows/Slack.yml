@@ -1,7 +1,7 @@
 name: Slack Notification Demo
 on: 
-  push:
-    branches: [ "master" ]
+  #push:
+  #  branches: [ "master" ]
   # Scheduling run
   schedule:
   - cron: "*/5 * * * *"
