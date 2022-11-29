@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Slack Notification
-      #uses: QABot/action-slack-notify@v2
+      uses: slackapi/slack-github-action@v1.23.0
       env:
         SLACK_CHANNEL: sampler
         SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
