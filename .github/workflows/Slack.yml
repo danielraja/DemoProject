@@ -7,13 +7,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Slack Notification
-      uses: slackapi/slack-github-action@v1.23.0
+      uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: sampler
         SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
         SLACK_ICON: https://github.com/rtCamp.png?size=48
-        SLACK_MESSAGE: 'Test Run Results for your reference :rocket:'
-        SLACK_TITLE: QA Automation Test Results
+        SLACK_MESSAGE: 'Slack Update Successful :rocket:'
+        SLACK_TITLE: Slack Updater!
         SLACK_USERNAME: QABot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
