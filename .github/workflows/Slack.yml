@@ -16,3 +16,4 @@ jobs:
         SLACK_TITLE: QA Automation Test Results
         SLACK_USERNAME: QABot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
