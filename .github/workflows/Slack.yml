@@ -25,7 +25,7 @@ jobs:
       - name: Send Slack notification (#sampler)
         run: |
           curl -X POST --data \
-          "payload=Autoamtion Run on {\"text\": \"${{ env.GIT_BRANCH }} branch is completed by ${{ github.actor }} :rocket:\"}" \
+          "payload={\"text\": \"${{ env.GIT_BRANCH }} branch Automation Run is completed by ${{ github.actor }} :rocket:\"}" \
           ${{ secrets.SLACK_WEBHOOK }}
         
   slackNotification:
