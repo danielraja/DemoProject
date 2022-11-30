@@ -26,7 +26,7 @@ jobs:
         run: |
             curl -X POST --data \
             "payload={\"text\": \"${{ env.GIT_BRANCH }} ${{ github.action }} branch in ${{ github.env }} is being deployed by ${{ github.actor }} for ${{ github.event }} :rocket:\"}" \
-            ${{ secrets.QA_DEV_WEBHOOK }}
+            ${{ secrets.SLACK_WEBHOOK }}
   #slackNotification:
    # name: Slack Notification
    # runs-on: ubuntu-latest
