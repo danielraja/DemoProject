@@ -1,6 +1,8 @@
 name: Slack Notification Demo
-on: 
-  push
+on:
+
+  workflow_dispatch:
+  push:
    # branches: [ "master" ]
   # Scheduling run
   #schedule:
