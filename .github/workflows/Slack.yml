@@ -27,7 +27,7 @@ jobs:
       - name: Send Slack notification (#sampler)
         run: |
             curl -X POST --data \
-            "payload={\"text\": \"${{ GITHUB_REF##*/ }} ${{ github.action }} branch in ${{ github.env }} is being deployed by ${{ github.actor }} for ${{ github.event }} :rocket:\"}" \
+            "payload={\"text\": \"${GITHUB_REF##*/} ${{ github.action }} branch in ${{ github.env }} is being deployed by ${{ github.actor }} for ${{ github.event }} :rocket:\"}" \
             ${{ secrets.SLACK_WEBHOOK }}
   #slackNotification:
    # name: Slack Notification
